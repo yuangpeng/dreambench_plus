@@ -1,0 +1,12 @@
+Yes, I understand the task. It involves evaluating the semantic consistency between a reference image and a generated image based on specific criteria. The evaluation focuses on four main aspects: shape, color, texture, and facial features (if applicable). The goal is to determine how closely the generated image matches the reference image in terms of these aspects. The evaluation should result in a specific score ranging from 0 (no resemblance) to 4 (near-identical resemblance).
+
+To evaluate the images, I plan to follow these steps:
+
+1. **Shape**: Assess if the main body outline, structure, and proportions of the generated image are consistent with the reference image. This includes looking at the geometric shape, clarity of edges, relative sizes, and spatial relationships between various parts.
+2. **Color**: Compare the main colors in terms of accuracy and consistency, including saturation, hue, brightness, and the distribution of colors.
+3. **Texture**: Examine the details in the local parts of the image to see if the generated image captures fine details without appearing blurry and maintains realism, clarity, and aesthetic appeal.
+4. **Facial Features**: If the subject includes a person or animal, closely compare facial features to judge visual similarity.
+
+After analyzing these aspects, I will provide a concise analysis and assign a score based on the overall performance of the generated image in relation to the reference image. The score will reflect how similar the generated image is to the reference, strictly adhering to the evaluation criteria provided.
+
+Please provide me with the samples I need to evaluate.

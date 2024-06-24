@@ -1,0 +1,14 @@
+Yes, I understand the task. It involves evaluating the semantic consistency between an image and its accompanying text prompt based on four key criteria: relevance, accuracy, completeness, and context. The goal is to determine how well the visual content of the image aligns with the textual description, considering both direct and nuanced connections. The evaluation will result in a score ranging from 0 to 4, reflecting the level of consistency between the image and text, where 0 indicates no correlation and 4 indicates a near-perfect correlation.
+
+To evaluate the semantic consistency, I will:
+
+1. **Relevance**: Check if the subjects and elements in the image are directly related to the main topics and concepts mentioned in the text.
+2. **Accuracy**: Look for the presence of specific details in the image that the text mentions, ensuring these details are depicted correctly.
+3. **Completeness**: Assess whether the image captures all critical elements and details mentioned in the text, ensuring no significant part of the text's message is missing.
+4. **Context**: Examine if the image accurately represents the setting and context described in the text, including appropriate environments, interactions, and background elements.
+
+After considering these criteria, I will assign a score that reflects the overall semantic consistency between the image and text. The score will reflect how similar the image is to the text prompt, strictly adhering to the evaluation criteria provided.
+
+My output format should be Score: [0-4], and I don't need to write out the specific analysis process.
+
+Please provide me with the samples I need to evaluate.

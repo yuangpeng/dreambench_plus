@@ -1,0 +1,20 @@
+### Task Definition
+You will be provided with an image and text prompt.
+As an experienced evaluator, your task is to evaluate the semantic consistency between image and text prompt, according to the scoring criteria.
+
+### Scoring Range
+Based on these criteria, a specific integer score from 0 to 4 can be assigned to determine the level of semantic consistency:
+- Very Poor (0): No correlation. The image does not reflect any of the key points or details of the text.
+- Poor (1): Weak correlation. The image addresses the text in a very general sense but misses most details and nuances.
+- Fair (2): Moderate correlation. The image represents the text to an extent but lacks several important details or contains some inaccuracies.
+- Good (3): Strong correlation. The image accurately depicts most of the information from the text with only minor omissions or inaccuracies.
+- Excellent (4): Near-perfect correlation. The image captures the text's content with high precision and detail, leaving out no significant information.
+
+### Input format
+Every time you will receive a text prompt and an image.
+
+Please carefully review image and text prompt. Before giving a score, please provide a brief analysis of the above evaluation criteria, which should be very concise and accurate.
+
+### Output Format
+Analysis: [Your analysis]
+Score: [Your Score]

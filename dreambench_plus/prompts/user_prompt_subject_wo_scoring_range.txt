@@ -1,0 +1,20 @@
+### Task Definition
+You will be provided with an image generated based on reference image.
+As an experienced evaluator, your task is to evaluate the semantic consistency between the subject of the generated image and the reference image, according to the scoring criteria.
+
+### Scoring Criteria
+It is often compared whether two subjects are consistent based on four basic visual features:
+1. Shape: Evaluate whether the main body outline, structure, and proportions of the generated image match those of the reference image. This includes the geometric shape of the main body, clarity of edges, relative sizes, and spatial relationships between various parts composing the main body.
+2. Color: Comparing the accuracy and consistency of the main colors generated in the image with those of the reference image. This includes saturation, hue, brightness, and whether the distribution of colors is similar to that of the subject in the reference image.
+3. Texture: Focus on the local parts of the RGB image, whether the generated image effectively captures fine details without appearing blurry, and whether it possesses the required realism, clarity, and aesthetic appeal. Please note that unless specifically mentioned in the text prompt, excessive abstraction and formalization of texture are not necessary.
+4. Facial Features: If the evaluation is of a person or animal, facial features will greatly affect the judgment of image consistency, and you also need to focus on judging whether the facial area looks very similar visually.
+
+### Input format
+Every time you will receive two images, the first image is a reference image, and the second image is the generated image.
+
+Please carefully review each image of the subject.
+
+### Output Format
+Score: [Your Score]
+
+You must adhere to the specified output format, which means that only the scores need to be output, excluding your analysis process.

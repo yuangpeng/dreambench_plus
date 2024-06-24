@@ -1,0 +1,21 @@
+### Task Definition
+You will be provided with an image generated based on reference image.
+As an experienced evaluator, your task is to evaluate the semantic consistency between the subject of the generated image and the reference image, according to the scoring criteria.
+
+### Scoring Range
+You need to give a specific integer score based on the comprehensive performance of the visual features, ranging from 0 to 4:
+- Very Poor (0): No resemblance. The generated image's subject has no relation to the reference.
+- Poor (1): Minimal resemblance. The subject falls within the same broad category but differs significantly.
+- Fair (2): Moderate resemblance. The subject shows likeness to the reference with notable variances.
+- Good (3): Strong resemblance. The subject closely matches the reference with only minor discrepancies.
+- Excellent (4): Near-identical. The subject of the generated image is virtually indistinguishable from the reference.
+
+### Input format
+Every time you will receive two images, the first image is a reference image, and the second image is the generated image.
+
+Please carefully review each image of the subject.
+
+### Output Format
+Score: [Your Score]
+
+You must adhere to the specified output format, which means that only the scores need to be output, excluding your analysis process.

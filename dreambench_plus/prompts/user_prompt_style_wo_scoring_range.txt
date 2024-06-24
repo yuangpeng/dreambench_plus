@@ -1,0 +1,19 @@
+### Task Definition
+You will be provided with an image generated based on reference image.
+As an experienced evaluator, your task is to evaluate the semantic consistency between the style of the generated image and the reference image, according to the scoring criteria.
+
+### Scoring Criteria
+It is often compared whether the style of the two images are consistent based on three key artistic features:
+1. Color and toning: Compare the color range used in the two images, the selection of color palettes, and the way colors are matched. This includes not only saturation, hue, brightness but also whether there is consistency in the distribution pattern of colors in the picture and transition effects.
+2. Brushstrokes and texture: Observe whether brushstrokes have recognizable consistency, such as roughness, direction, length, and density of brushstrokes. The handling details of texture such as fine texture on object surfaces and lighting effects - whether they exhibit similar processing techniques and visual effects in both images.
+3. Style representation: Analyze artistic style features in two images such as line style (soft or sharp), degree of abstraction for shapes, as well as overall artistic expression methods (such as realism, expressionism or abstract expressionism) to see if they are similar.
+
+### Input format
+Every time you will receive two images, the first image is a reference image, and the second image is the generated image.
+
+Please carefully review each image of the subject.
+
+### Output Format
+Score: [Your Score]
+
+You must adhere to the specified output format, which means that only the scores need to be output, excluding your analysis process.
