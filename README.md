@@ -139,8 +139,6 @@ python dreambench_plus/benchmarking.py
 python dreambench_plus/krippendorff_analysis.py
 ```
 
-## 
-
 ## Citation
 
 If you find DreamBench++ useful for your research and applications, please cite using this BibTeX:
