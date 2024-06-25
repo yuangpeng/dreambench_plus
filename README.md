@@ -6,7 +6,7 @@
 
 [Yuang Peng](https://yuangpeng.com/), [Yuxin Cui](https://scholar.google.com/citations?user=kQucB04AAAAJ), [Haomiao Tang](https://github.com/tanghme0w), [Zekun Qi](https://qizekun.github.io), [Runpei Dong](https://runpeidong.web.illinois.edu), [Jing Bai](https://github.com/joan-moon), [Chunrui Han](https://scholar.google.com/citations?user=D6tWz44AAAAJ), [Zheng Ge](https://scholar.google.com/citations?user=hJ-VrrIAAAAJ), [Xiangyu Zhang](https://scholar.google.com/citations?user=yuB-cfoAAAAJ) and [Shu-tao Xia](https://scholar.google.com/citations?user=koAXTXgAAAAJ)
 
-[Project Page](https://dreambenchplus.github.io/) | [Arxiv](https://arxiv.org/abs/xxxx.xxxxx)
+[Project Page](https://dreambenchplus.github.io/) | [Arxiv](https://arxiv.org/abs/2406.16855)
 
 <img src="assets/poster.png" width="100%">
 
@@ -144,11 +144,11 @@ python dreambench_plus/krippendorff_analysis.py
 If you find DreamBench++ useful for your research and applications, please cite using this BibTeX:
 
 ```bibtex
-@article{peng2024dreambench++,
-    author={Yuang Peng and Yuxin Cui and Haomiao Tang and Zekun Qi and Runpei Dong and Jing Bai and Chunrui Han and Zheng Ge and Xiangyu Zhang and Shu-tao Xia},
+@article{peng2024dreambench,
+    author={Yuang Peng and Yuxin Cui and Haomiao Tang and Zekun Qi and Runpei Dong and Jing Bai and Chunrui Han and Zheng Ge and Xiangyu Zhang and Shu-Tao Xia},
     title={DreamBench++: A Human-Aligned Benchmark for Personalized Image Generation},
     journal={CoRR},
-    volume={abs/xxxx.xxxxx},
+    volume={abs/2406.16855},
     year={2024},
     url={https://dreambenchplus.github.io/},
 }
