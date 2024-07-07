@@ -6,7 +6,7 @@
 
 [Yuang Peng](https://yuangpeng.com/), [Yuxin Cui](https://scholar.google.com/citations?user=kQucB04AAAAJ), [Haomiao Tang](https://github.com/tanghme0w), [Zekun Qi](https://qizekun.github.io), [Runpei Dong](https://runpeidong.web.illinois.edu), [Jing Bai](https://github.com/joan-moon), [Chunrui Han](https://scholar.google.com/citations?user=D6tWz44AAAAJ), [Zheng Ge](https://scholar.google.com/citations?user=hJ-VrrIAAAAJ), [Xiangyu Zhang](https://scholar.google.com/citations?user=yuB-cfoAAAAJ) and [Shu-tao Xia](https://scholar.google.com/citations?user=koAXTXgAAAAJ)
 
-[Project Page](https://dreambenchplus.github.io/) | [Arxiv](https://arxiv.org/abs/2406.16855) | [Benchmark](https://paperswithcode.com/task/personalized-image-generation)
+[Project Page](https://dreambenchplus.github.io/) | [Arxiv](https://arxiv.org/abs/2406.16855) | [Benchmark](https://paperswithcode.com/task/personalized-image-generation) | [HuggingFace](https://huggingface.co/datasets/yuangpeng/dreambench_plus)
 
 <img src="assets/poster.png" width="100%">
 
