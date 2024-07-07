@@ -27,7 +27,7 @@ DreamBench++ contains three categories: live subject (animals and humans), objec
 
 Most of these pictures come from the author's own collection, [unsplash](www.unsplash.com), [rawpixel](https://www.rawpixel.com), and [Google Image Search](https://images.google.com). **Each image’s copyright status has been verified for academic suitability.**
 
-You can download the dataset from [Google Drive](https://drive.google.com/file/d/17HNVYU5yvuHDC6VhesJsWsXo1UWy_CSs/view?usp=share_link). After downloading the dataset, you can preview the dataset in the following ways:
+You can download the dataset from [Google Drive](https://drive.google.com/file/d/17HNVYU5yvuHDC6VhesJsWsXo1UWy_CSs/view?usp=share_link) or [HuggingFace](https://huggingface.co/datasets/yuangpeng/dreambench_plus). After downloading the dataset, you can preview the dataset in the following ways:
 
 ```bash
 pip install streamlit
