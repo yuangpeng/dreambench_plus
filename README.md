@@ -35,6 +35,17 @@ cd data
 streamlit run preview.py
 ```
 
+## Data
+| Data |
+| --- |
+| [DreamBench++ Evaluation Dataset](https://drive.google.com/file/d/17HNVYU5yvuHDC6VhesJsWsXo1UWy_CSs/view?usp=share_link) |
+| [Full Samples with 7 mehtods](https://drive.google.com/file/d/177GVdYtf0eAOpJO1F4pnoIB87TdVfw4R/view?usp=sharing) |
+| [human rating data](https://drive.google.com/file/d/17FK9wHsKxTdIBo8_JkDCa3mU8-VJ3yLj/view?usp=share_link) |
+| [GPT rating data](https://drive.google.com/file/d/17E-GShOwvFWWVNCCbU323I8FfyfmbbNV/view?usp=share_link) |
+| [DINO rating data](https://drive.google.com/file/d/1WK71LFCGuPitB8ZNgQVz4A6C89tltX4J/view?usp=sharing) |
+| [CLIP-I rating data](https://drive.google.com/file/d/1iaFUcYiBnMf-VaZ-4VhFZhLL9_NDKQ1b/view?usp=sharing) |
+| [CLIP-T rating data](https://drive.google.com/file/d/1QN7UjKBuTmU-LtOzsCVjSBA3uoKQFghc/view?usp=sharing) |
+
 ## Get Started
 
 ### Step 1. Installation
