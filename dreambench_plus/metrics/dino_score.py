@@ -1,3 +1,4 @@
+import json
 import math
 import os
 from typing import Literal
@@ -109,6 +110,7 @@ def multigpu_eval_dino_score(
     distributed_state: PartialState | None = None,
     dino_score: DinoScore | Dinov2Score | None = None,
     version: Literal["v1", "v2"] = "v1",
+    write_to_json: bool = False,
 ) -> float:
     if distributed_state is None:
         distributed_state = PartialState()
@@ -153,15 +155,33 @@ def multigpu_eval_dino_score(
         disable=not distributed_state.is_local_main_process,
     )
 
+    save_dict = {}
     with distributed_state.split_between_processes(params) as sub_params:
         score = 0
         for _param in sub_params:
             image1_file, image2_file = _param
+            save_key = image1_file.split(image1_dir)[-1].split(".")[0].replace("/", "-")
             image1, image2 = load_image(image1_file), load_image(image2_file)
-            score += dino_score.dino_score(image1, image2)[0]
+            _score = dino_score.dino_score(image1, image2)[0]
+            save_dict[save_key] = _score.item()
+            score += _score
+
             pbar.update(1)
 
+    if write_to_json:
+        with open(f"tmp_dino_scores_{distributed_state.process_index}.json", "w") as f:
+            json.dump(save_dict, f, indent=4)
     scores = all_gather(score)
+    if write_to_json:
+        if distributed_state.is_local_main_process:
+            save_dict = {}
+            for i in range(distributed_state.num_processes):
+                with open(f"tmp_dino_scores_{i}.json", "r") as f:
+                    _dict = json.load(f)
+                    save_dict.update(_dict)
+                os.remove(f"tmp_dino_scores_{i}.json")
+            with open(f"dino_scores_{version}.json", "w") as f:
+                json.dump(save_dict, f, indent=4)
     return (sum(scores) / len(image1_files)).item()
 
 

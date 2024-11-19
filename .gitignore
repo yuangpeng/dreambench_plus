@@ -149,3 +149,6 @@ samples
 data
 data_human_rating
 data_gpt_rating
+data_clipi_rating
+data_clipt_rating
+data_dino_rating

@@ -1,3 +1,4 @@
+import json
 import math
 import os
 from typing import Literal
@@ -100,6 +101,7 @@ def multigpu_eval_clipi_score(
     image2_dir: str,
     distributed_state: PartialState | None = None,
     clip_score: CLIPScore | None = None,
+    write_to_json: bool = False,
 ) -> float:
     if distributed_state is None:
         distributed_state = PartialState()
@@ -139,15 +141,33 @@ def multigpu_eval_clipi_score(
         disable=not distributed_state.is_local_main_process,
     )
 
+    save_dict = {}
     with distributed_state.split_between_processes(params) as sub_params:
         score = 0
         for _param in sub_params:
             image1_file, image2_file = _param
+            save_key = image1_file.split(image1_dir)[-1].split(".")[0].replace("/", "-")
             image1, image2 = load_image(image1_file), load_image(image2_file)
-            score += clip_score.clipi_score(image1, image2)[0]
+            _score = clip_score.clipi_score(image1, image2)[0]
+            save_dict[save_key] = _score.item()
+            score += _score
+
             pbar.update(1)
 
+    if write_to_json:
+        with open(f"tmp_clip_scores_{distributed_state.process_index}.json", "w") as f:
+            json.dump(save_dict, f, indent=4)
     scores = all_gather(score)
+    if write_to_json:
+        if distributed_state.is_local_main_process:
+            save_dict = {}
+            for i in range(distributed_state.num_processes):
+                with open(f"tmp_clip_scores_{i}.json", "r") as f:
+                    _dict = json.load(f)
+                    save_dict.update(_dict)
+                os.remove(f"tmp_clip_scores_{i}.json")
+            with open(f"clip_scores_image.json", "w") as f:
+                json.dump(save_dict, f, indent=4)
     return (sum(scores) / len(image1_files)).item()
 
 
@@ -156,6 +176,7 @@ def multigpu_eval_clipt_score(
     image_dir: str,
     distributed_state: PartialState | None = None,
     clip_score: CLIPScore | None = None,
+    write_to_json: bool = False,
 ) -> float:
     if distributed_state is None:
         distributed_state = PartialState()
@@ -193,17 +214,34 @@ def multigpu_eval_clipt_score(
         disable=not distributed_state.is_local_main_process,
     )
 
+    save_dict = {}
     with distributed_state.split_between_processes(params) as sub_params:
         score = 0
         for _param in sub_params:
             text_file, image_file = _param
+            save_key = image_file.split(image_dir)[-1].split(".")[0].replace("/", "-")
             with megfile.smart_open(text_file, "r") as f:
                 text = f.read()
             image = load_image(image_file)
-            score += clip_score.clipt_score(text, image)[0]
+            _score = clip_score.clipt_score(text, image)[0]
+            save_dict[save_key] = _score.item()
+            score += _score
             pbar.update(1)
 
+    if write_to_json:
+        with open(f"tmp_clip_scores_{distributed_state.process_index}.json", "w") as f:
+            json.dump(save_dict, f, indent=4)
     scores = all_gather(score)
+    if write_to_json:
+        if distributed_state.is_local_main_process:
+            save_dict = {}
+            for i in range(distributed_state.num_processes):
+                with open(f"tmp_clip_scores_{i}.json", "r") as f:
+                    _dict = json.load(f)
+                    save_dict.update(_dict)
+                os.remove(f"tmp_clip_scores_{i}.json")
+            with open(f"clip_scores_text.json", "w") as f:
+                json.dump(save_dict, f, indent=4)
     return (sum(scores) / len(text_files)).item()
 
 
